@@ -1,0 +1,265 @@
+/*Menu juegos*/
+.listado_juegos .menu_vertical{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+
+	.listado_juegos .menu_vertical ul{
+		padding-left: 0;
+		list-style: none;
+		line-height: 2;
+	}
+
+/*Contenido*/
+.listado_juegos .contenido{
+	width: 80%;
+	float: left;
+}
+
+	/*Menu horizontal*/
+	.listado_juegos .menu_horizontal{
+		height: 100%;
+	}
+
+		.listado_juegos .menu_horizontal_busqueda{
+			width: 70%;
+			float: left;
+		}
+
+			.listado_juegos .menu_horizontal_izquierda{
+				width: 50%;
+				float: left;
+				text-align: right;
+			}
+
+			.listado_juegos .menu_horizontal_derecha{
+				width: 50%;
+				float: left;
+				text-align: right;
+			}
+			
+		.listado_juegos .menu_horizontal_orden{
+			width: 30%;
+			float: left;
+			text-align: right;
+		}
+
+	/*Paginación*/
+	.listado_juegos .pagination{
+		padding: 20px;
+		text-align: center;
+	}
+
+	/*Contenedor juegos*/
+	.listado_juegos .contenedor_juegos{
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align:center;
+		background-color: #eeeeee;
+		box-shadow: 3px 3px 2px #bbb;	
+	}
+
+		/*Cuadro de un juego*/
+		.listado_juegos .cuadro_juego{
+			position: relative; /*Para que el hijo pueda hacer un position absolute respecto al padre*/
+			height: 160px;
+			width: 330px;
+			display:inline-block;
+			margin: 2px;
+			background-color: #ffffff;
+		}
+		
+			/*Enlace para todo un div*/
+			.listado_juegos .juego_link{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 0;
+			}
+			
+			/*Cuadro de la foto de un juego*/
+			.listado_juegos .juego_foto{
+				position: relative; /*Para que el hijo pueda hacer un position absolute respecto al padre*/
+				width: 140px;
+				height: 100%;
+				float: left;
+				background-color: #8d8d8d;
+			}
+
+			/*Cuadro del texto de un juego*/
+			.listado_juegos .juego_texto{
+				position: relative; /*Para que el hijo pueda hacer un position absolute respecto al padre*/
+				width: 170px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 7px;
+				float: left;
+				background-color: #ffffff;
+			}
+
+/*Botones como link*/
+.listado_juegos  .menu_vertical input
+{
+    background: none!important;
+    border: none;
+    cursor: pointer;
+}
+
+.listado_juegos  .menu_vertical input:active,
+.listado_juegos  .menu_vertical input:focus
+{
+	border: none;
+	box-shadow: none;
+}
+
+.listado_juegos .menu_vertical input:hover{
+	text-decoration: underline;
+}
+
+/*Formato del texto de un juego*/
+.listado_juegos .juego_texto h2,
+.listado_juegos .juego_texto p{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	text-align: left;
+}
+
+.listado_juegos .juego_texto h2{
+	position: relative; /*Para que el hijo pueda hacer un position absolute respecto al padre*/
+	overflow: hidden; /*Para lo que pase del final de la línea, que no se vea*/
+	font-size: 20px;
+	white-space: nowrap; /*Para que no haya salto de línea si el título es largo*/
+}
+
+.listado_juegos  a{
+	color: #333;
+}
+
+.listado_juegos .juego_texto p{
+	font-size: 13px;
+	color: #8d8d8d;
+}
+
+.listado_juegos .texto_descripcion{
+	position: relative; /*Para que el hijo pueda hacer un position absolute respecto al padre*/
+	min-height: 20px;
+	max-height: 54px;
+	overflow: hidden;
+}
+
+/*Elemento de degradado para el final de un párrafo*/
+.listado_juegos .final_parrafo{
+	position: absolute;
+	max-height: 100%;
+	width: 60px;
+	height: 18px;
+	right: 0;
+	bottom: 0;
+	background-image: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(100%,rgba(255,255,255,1)));
+	background-image: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+	background-image: -moz-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+	background-image: -ms-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+	background-image: -o-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,1));
+	background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#00ffffff',EndColorStr='#ffffff');
+}
+
+.listado_juegos .final_parrafo_titulo{
+	height: 25px;
+}
+
+/*Transición de imagen*/
+.listado_juegos .transicion{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+	background: rgba(0,0,0,0.4);
+}
+
+.listado_juegos .transicion:hover{
+	-moz-opacity: 1;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/*Diseño elementos formulario*/
+.listado_juegos input,
+.listado_juegos select{
+	padding: 5px;
+	margin: 3px;
+	width: 150px;
+}
+
+.listado_juegos #search_button{
+	width: 100px;
+	background-color: #006AB6;
+	color: #ffffff;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.10), inset 0 1px 0 #fff;
+}
+
+.listado_juegos #search_button:active{
+	background-color:  #ffffff;
+	color:  #006AB6;
+	box-shadow: none;
+}
+
+/*Clearer*/
+.clearer { clear: both; }
+
+/*Varios*/
+.listado_juegos .aligncenter{
+	text-align: center;
+}
+
+/*Responsive*/
+@media screen and (max-width:700px) {
+	.listado_juegos .menu_vertical{
+		width: 100%;
+		float: none;
+		padding-bottom: 15px;
+	}
+
+	.listado_juegos .contenido{
+		width: 100%;
+		float: none;
+	}
+
+		.listado_juegos .menu_horizontal_busqueda{
+			width: 100%;
+			float: none;
+		}
+
+			.listado_juegos .menu_horizontal_izquierda{
+				width: 100%;
+				float: none;
+			}
+
+			.listado_juegos .menu_horizontal_derecha{
+				width: 100%;
+				float: none
+			}
+
+		.listado_juegos .menu_horizontal_orden{
+			width: 100%;		
+			float: none;
+			padding-bottom: 15px;
+		}
+
+	.elgg-page-default .elgg-page-body > .elgg-inner {
+		padding: 0;
+	}
+}
+

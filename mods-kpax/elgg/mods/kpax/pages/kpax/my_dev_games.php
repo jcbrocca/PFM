@@ -67,7 +67,7 @@ if(isset($gamesList) && sizeof($gamesList) > 0){
 		);
 
 } else {
-    $content .= '<div><p>' . elgg_echo('kpax:noGames') . '</p></div>';
+    $content .= '<div><p>' . elgg_echo('kPAX:noGames') . '</p></div>';
 }
 
 
